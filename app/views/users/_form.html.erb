@@ -21,6 +21,11 @@
     <%= form.text_field :name %>
 </div>
 
+<div class="field">
+    <%= form.label :files %>
+    <%= form.file_field :files, direct_upload: true, multiple: true %>
+</div>
+
 <div class="actions">
     <%= form.submit %>
 </div>

@@ -10,5 +10,12 @@
     <%= @user.name %>
 </p>
 
+<p>
+    <strong>Files:</strong>
+    <% @user.files.each do |file| %>
+    <a href="<%= rails_blob_path(file, disposition: "attachment")%>">Download <%= file.filename %></a>
+    <% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
