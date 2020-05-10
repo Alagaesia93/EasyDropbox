@@ -2,7 +2,9 @@
 
 <p>
     <strong>Avatar:</strong>
-    <%= image_tag url_for(@user.avatar), size: "50x50" %>
+    <% if @user.avatar.attached? %>
+    <%= image_tag cloudfront_url_for(@user.avatar), size: "50x50" %>
+    <% end %>
 </p>
 
 <p>

@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-s3', require: false
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 4.1'
